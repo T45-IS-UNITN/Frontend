@@ -1,4 +1,4 @@
-<footer class="mt-auto">
+<footer class="mt-auto pt-5">
     <ul class="nav justify-content-center border-bottom pb-2 mb-2">
         <li class="nav-item">NovelNotes</li>
     </ul>

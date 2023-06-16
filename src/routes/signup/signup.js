@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export async function doSignupRequest(name, email, password) {
     try {
         const response = await axios.post("http://localhost:3000/user", {

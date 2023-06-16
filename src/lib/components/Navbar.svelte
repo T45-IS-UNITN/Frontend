@@ -49,11 +49,11 @@
                 <input
                     class="form-control me-2"
                     type="search"
-                    placeholder="Search"
+                    placeholder=""
                     aria-label="Search"
                 />
                 <button class="btn btn-outline-success" type="submit"
-                    >Search</button
+                    >Cerca</button
                 >
             </form>
         </div>

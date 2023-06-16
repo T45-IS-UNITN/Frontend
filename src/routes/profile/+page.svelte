@@ -1,20 +1,39 @@
 <script>
-    /** @type {import('./$types').PageData} */
-    export let data;
+    import { onMount } from "svelte";
+    import users from "./dummyUsers";
+    import favs from "./dummyFavs";
 
-    let user = {
-        _id: "6488abeb602b55a1eddccb7f",
-        name: "Alvaro Vitali",
-        email: "alvaro@mail.com",
-        password:
-            "$2b$10$l9gQplibbvjErfG9NXvPe.tfuZlLzBQ59Fnt/XlCn91RBiKHmoU1W",
-        libriPreferiti: [],
-        follow: [],
-        __v: 0,
-    };
+    let username = "Tomas";
+    let favoriteBooks = [];
+    let followedUsers = [];
+
+    onMount(() => {
+        favoriteBooks = favs;
+        followedUsers = users;
+    });
 </script>
 
-<div>
-    <h2>{user.name}</h2>
-    <p>{user.email}</p>
+<div class="container mt-4">
+    <h1>Profilo personale</h1>
+    <h2>Ciao {username}!</h2>
+
+    <div class="row pt-3">
+        <div class="col-md-6">
+            <h3>Libri preferiti</h3>
+            <ul class="list-group">
+                {#each favoriteBooks as book}
+                    <li class="list-group-item">{book.titolo}</li>
+                {/each}
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <h3>Utenti seguiti</h3>
+            <ul class="list-group">
+                {#each followedUsers as user}
+                    <li class="list-group-item">{user.name}</li>
+                {/each}
+            </ul>
+        </div>
+    </div>
 </div>

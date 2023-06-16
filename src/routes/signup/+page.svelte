@@ -1,5 +1,5 @@
 <script>
-    import { doLoginRequest } from "../login/login";
+    import { doSignupRequest } from "./signup";
 
     let name = "";
     let email = "";
@@ -7,7 +7,7 @@
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        doLoginRequest(name, email, password);
+        doSignupRequest(name, email, password);
     };
 </script>
 
@@ -20,7 +20,9 @@
                 </div>
                 <div class="card shadow-lg">
                     <div class="card-body p-5">
-                        <h1 class="fs-4 card-title fw-bold mb-4">Sign Up</h1>
+                        <h1 class="fs-4 card-title fw-bold mb-4">
+                            Registrazione
+                        </h1>
                         <form
                             method="POST"
                             class="needs-validation"
@@ -94,7 +96,7 @@
                     </div>
                     <div class="card-footer py-3 border-0">
                         <div class="text-center">
-                            Already have an account? <a
+                            Sei già registrato? <a
                                 href="/login"
                                 class="text-dark">Log In</a
                             >

@@ -74,9 +74,9 @@
                     </div>
                     <div class="card-footer py-3 border-0">
                         <div class="text-center">
-                            Don't have an account? <a
+                            Non sei registrato? <a
                                 href="/signup"
-                                class="text-dark">Create One</a
+                                class="text-dark">Registrati</a
                             >
                         </div>
                     </div>
