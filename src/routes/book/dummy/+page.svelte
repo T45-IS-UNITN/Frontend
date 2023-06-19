@@ -1,6 +1,11 @@
 <script>
     import { onMount } from "svelte";
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert("Recensione pubblicata");
+    };
+
     let book = {
         titolo: "",
         autore: "",
@@ -10,17 +15,17 @@
     };
 
     let coverURL =
-        "https://m.media-amazon.com/images/I/51Y485elf3L._SY346_.jpg";
+        "https://images.manning.com/360/480/resize/book/5/d3ed2a4-e017-493e-beb6-776c7e2c5cbe/Volkmann-Svelte-HI.png";
 
     onMount(() => {
         // simulo una richiesta GET
         book = {
-            titolo: "Il nome del vento",
-            autore: "Patrick Rothfuss",
+            titolo: "Lorem Ipsum",
+            autore: "Nome Autore",
             annoPubblicazione: 2007,
             generi: ["Fantasy", "Avventura"],
             descrizione:
-                "\"Il nome del vento\" è un romanzo scritto da Patrick Rothfuss, pubblicato nel 2007. Ambientato in un mondo fantastico, il libro segue la vita di Kvothe, un ragazzo con un dono straordinario per la musica e la magia. La trama ruota attorno alla ricerca di Kvothe per scoprire la verità dietro l'assassinio dei suoi genitori, avvenuto quando era solo un bambino. Attraverso il suo viaggio, Kvothe affronta avventure mozzafiato, incontri con creature misteriose e intrighi politici. Il libro esplora i temi della magia, dell'amore, dell'amicizia e della vendetta, mentre Kvothe lotta per sopravvivere in un mondo pieno di pericoli e intrighi. Con una prosa avvincente e ricca di dettagli, Patrick Rothfuss dipinge un mondo immaginario vivido e coinvolgente, catturando l'immaginazione dei lettori e facendo emergere i dilemmi morali e le sfide emotive del protagonista.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus maximus convallis nibh non viverra. Morbi suscipit neque in placerat fermentum. Curabitur sed lobortis magna, ac rutrum magna. Duis blandit eleifend dolor, nec sodales massa imperdiet vel. Fusce nec sollicitudin lectus, sit amet dignissim magna. Nulla cursus, lorem et rutrum suscipit, est purus ullamcorper tortor, nec vestibulum purus mi ut lectus. Sed sit amet odio at erat ultrices ullamcorper. Vivamus imperdiet lobortis nunc, blandit viverra lectus mollis non. Etiam a ipsum sed lorem efficitur commodo. Praesent suscipit elit mattis metus tincidunt semper sit amet sit amet turpis. Morbi non pellentesque arcu. Duis consectetur augue quis sagittis molestie. Phasellus mollis a nisi a commodo. Vivamus dictum felis eget nulla convallis pretium. Aenean sit amet porta turpis. Ut laoreet viverra metus, pulvinar condimentum tortor. Vivamus lacinia in leo non mollis. Quisque orci ante, vehicula sed odio quis, vehicula euismod risus. Nunc feugiat diam nisi, non imperdiet felis tempus sed.",
         };
     });
 </script>
@@ -54,12 +59,13 @@
                 </div>
                 <div class="card-footer">
                     <h5 class="py-3">Pubblica la tua recensione</h5>
-                    <form>
+                    <form on:submit={handleSubmit}>
                         <div class="mb-3">
                             <input
                                 type="text"
                                 class="form-control"
                                 placeholder="Titolo recensione"
+                                required
                             />
                         </div>
                         <div class="mb-3">
@@ -77,6 +83,7 @@
                                 class="form-control"
                                 rows="5"
                                 placeholder="Scrivi..."
+                                required
                             />
                         </div>
                         <button type="submit" class="btn btn-primary"

@@ -3,7 +3,7 @@
     import users from "./dummyUsers";
     import favs from "./dummyFavs";
 
-    let username = "Tomas";
+    let username = "NomeUtente";
     let favoriteBooks = [];
     let followedUsers = [];
 
@@ -14,9 +14,10 @@
 </script>
 
 <div class="container mt-4">
-    <h1>Profilo personale</h1>
-    <h2>Ciao {username}!</h2>
-
+    <div class="my-5 d-flex justify-content-between">
+        <h1>Profilo personale</h1>
+        <h2>Ciao {username}!</h2>
+    </div>
     <div class="row pt-3">
         <div class="col-md-6">
             <h3>Libri preferiti</h3>
@@ -31,7 +32,9 @@
             <h3>Utenti seguiti</h3>
             <ul class="list-group">
                 {#each followedUsers as user}
-                    <li class="list-group-item">{user.name}</li>
+                    <li class="list-group-item">
+                        <a href="/profile/{user.name}">{user.name}</a>
+                    </li>
                 {/each}
             </ul>
         </div>

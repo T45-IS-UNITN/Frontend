@@ -2,6 +2,8 @@
     import { onMount } from "svelte";
     import dummyBooks from "./dummyBooks.js";
 
+    let Genere = "Avventura";
+
     let books = [];
     let commonCover = "/src/media/bookcover.png";
 
@@ -11,7 +13,7 @@
 </script>
 
 <div class="container">
-    <h1 class="my-5">Consigliati</h1>
+    <h1 class="mb-4">{Genere}</h1>
 
     <div class="row">
         {#each books as book}
