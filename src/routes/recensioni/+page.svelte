@@ -1,6 +1,5 @@
 <script>
     import { onMount } from "svelte";
-    import { StarFill } from "svelte-bootstrap-icons";
     import reviews from "./dummyReview.js";
 
     let bookReviews = [];
@@ -22,7 +21,7 @@
                     </div>
                     <div>
                         {#each Array(review.voto) as _, index}
-                            <StarFill />
+                            <i class="bi bi-star-fill" />
                         {/each}
                     </div>
                 </div>
