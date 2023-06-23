@@ -1,38 +1,42 @@
-# create-svelte
+# Repository Frontend
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Questo repository contiene il codice frontend per il progetto. È sviluppato con SvelteKit e utilizza Vite come server di sviluppo. Il progetto include Bootstrap per lo stile e Axios per effettuare richieste HTTP.
 
-## Creating a project
+## Prima di iniziare
 
-If you're seeing this, you've probably already done this step. Congrats!
+Per eseguire il progetto in locale, seguire queste istruzioni:
+
+1. Clonare il repository sul proprio computer.
+2. Navigare alla cartella principale del progetto.
+3. Installare le dipendenze del progetto eseguendo il seguente comando:
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+npm install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+4. Avviare il server di sviluppo eseguendo il seguente comando:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+5. Aprire il proprio browser e accedere all'indirizzo `http://localhost:5173` per visualizzare l'applicazione in esecuzione.
 
-To create a production version of your app:
+## Script disponibili
 
-```bash
-npm run build
-```
+Nella cartella del progetto, è possibile eseguire i seguenti script:
 
-You can preview the production build with `npm run preview`.
+- `dev`: Avvia il server di sviluppo.
+- `build`: Compila il progetto per la produzione.
+- `preview`: Serve la versione di produzione per l'anteprima.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+È possibile eseguire questi script utilizzando `npm run <nome-script>`.
+
+## Struttura del progetto
+
+I principali file e cartelle di questo progetto sono i seguenti:
+
+- `src`: Contiene il codice sorgente dell'applicazione SvelteKit.
+- `src/routes`: Contiene i componenti delle varie pagine.
+- `src/lib`: Contiene funzioni di utilità e moduli riutilizzabili.
+- `public`: Contiene file statici come immagini e font.
