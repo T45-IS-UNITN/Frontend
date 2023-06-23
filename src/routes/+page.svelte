@@ -88,12 +88,6 @@
         margin-bottom: 30px;
     }
 
-    .hero-image {
-        width: 100%;
-        max-height: 400px;
-        object-fit: cover;
-    }
-
     .features-section {
         padding: 60px 0;
     }
@@ -122,16 +116,5 @@
 
     .feature-description {
         font-size: 16px;
-    }
-
-    .footer-section {
-        background-color: #f8f9fa;
-        padding: 20px 0;
-        margin-top: auto;
-    }
-
-    .footer-text {
-        font-size: 14px;
-        text-align: center;
     }
 </style>

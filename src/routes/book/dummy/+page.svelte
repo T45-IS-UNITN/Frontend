@@ -14,8 +14,7 @@
         descrizione: "",
     };
 
-    let coverURL =
-        "https://images.manning.com/360/480/resize/book/5/d3ed2a4-e017-493e-beb6-776c7e2c5cbe/Volkmann-Svelte-HI.png";
+    let coverURL = "/src/media/bookcover-for-page.png";
 
     onMount(() => {
         // simulo una richiesta GET
